@@ -1,47 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Be Part of the Generation That Ends the Water Crisis</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fef6e4;
+      color: #463f3a;
+      line-height: 2; /* Double spaced text for the whole page */
+      font-size: 1.5rem; /* Make all text bigger */
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+      max-width: 1400px; /* Make container wider */
+      margin: 3rem auto;
+      padding: 3rem;
+      gap: 3rem;
+    }
+    .left {
+      /* Make the left section more compact */
+      max-width: 600px; /* Make textbox wider */
+      width: 100%;
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; /* Center all content horizontally */
+      text-align: center;  /* Center text inside the left section */
+    }
+    .headline {
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+    .headline h1 {
+      font-size: 3.5rem; /* Bigger headline */
+      line-height: 2;
+      margin-bottom: 2rem;
+    }
+    .headline p {
+      font-size: 2.2rem; /* Bigger paragraph */
+      line-height: 2;
+      margin-bottom: 3rem;
+      color: #003049;
+    }
+    .drop-social {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Center the button and social info */
+      gap: 2rem;
+    }
+    .drop-button {
+      font-size: 2.6rem; /* Bigger button text */
+      line-height: 2; /* Double spaced for button text */
+      background-color: #003049;
+      color: #f1c40f;
+      padding: 2.5rem 5rem; /* Bigger button */
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 14px;
+    }
+    .social {
+      max-width: 300px;
+      color: #003049;
+      text-align: center; /* Center text in the social section */
+    }
+    .social p {
+      font-size: 2rem; /* Bigger social text */
+      line-height: 2; /* Double spaced for social text */
+      margin: 0.5rem 0;
+    }
+    .icons {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 3rem; /* Bigger icons */
+      margin: 1rem 0;
+      justify-content: center; /* Center the icons */
+    }
+    .icons a {
+      text-decoration: none;
+      color: #003049;
+    }
+    .images {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .top-image {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+    .bottom-right {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+    .bottom-left {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+    .main-image {
+      width: 100%;
+      max-width: 400px; /* Slightly smaller images */
+      height: 300px;    /* Slightly smaller images */
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+      }
+      .left {
+        max-width: 100%;
+      }
+      .headline h1 {
+        font-size: 2.5rem;
+      }
+      .headline p {
+        font-size: 1.6rem;
+      }
+      .drop-button {
+        font-size: 1.8rem;
+        padding: 1.5rem 2.5rem;
+      }
+      .social p {
+        font-size: 1.3rem;
+      }
+      .icons {
+        font-size: 2rem;
+      }
+      .images {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      .main-image {
+        max-width: 100%;
+        height: 180px; /* Slightly smaller for mobile */
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
-
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
+  <div class="container">
+    <div class="left">
+      <!-- The headline text is on the left side of the page -->
+      <!-- Move the headline further up by increasing the negative margin-top -->
+      <div class="headline" style="margin-bottom: 2rem; margin-top: -100px;">
+        <h1>
+          Be Part of the <span class="blue">Generation</span> That<br>
+          Ends the <span class="blue">Water</span> Crisis
+        </h1>
         <p>
-         
-    </section>
-
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+          See your drop make waves with a small donation that builds trackable water projects where they are desperately needed across the globe.
+        </p>
+      </div>
+      <div class="drop-social">
+        <a href="#" class="drop-button">DROP</a>
+        <div class="social">
+          <p><em>You don’t need deep pockets to make a deep change</em></p>
+          <div class="icons">
+            <a href="#">&#x1F464;</a>
+            <a href="#">&#x1F426;</a>
+            <a href="#">&#x2709;&#xFE0F;</a>
+          </div>
+          <p>Follow us on our socials and spread our mission</p>
         </div>
-    </section>
-
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+      </div>
+    </div>
+    <!-- Images on the right side: middletop.jpg on the left, topright.jpg and bottomright.jpg stacked on the right -->
+    <div class="images" style="display: flex; flex-direction: row; align-items: flex-start; width: 100%; justify-content: center; margin-top: 10px;">
+      <!-- middletop.jpg on the left, slightly to the left -->
+      <img src="img/middletop.jpg" alt="Middle Top Image" class="main-image" style="max-width: 260px; height: 300px; margin-left: -200px; border-radius: 60px;">
+      <!-- Stack topright.jpg and bottomright.jpg vertically with space between -->
+      <div style="display: flex; flex-direction: column; gap: 2rem;">
+        <img src="img/topright.jpg" alt="Top Right Image" class="main-image" style="border-radius: 60px;">
+        <img src="img/bottomright.jpg" alt="Bottom Right Image" class="main-image" style="border-radius: 60px;">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+    </div>
+  </div>
 </body>
 </html>
